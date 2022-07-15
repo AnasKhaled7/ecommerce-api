@@ -11,6 +11,7 @@ const indexRouter = require('./modules/index.router');
 
 app.use(cors());
 app.use(express.json());
+app.get('/', (req, res) => res.send(`<h1>Welcome</h1>`));
 app.use('/api/uploads', express.static(path.join(__dirname, './uploads')));
 app.use('/api/auth', indexRouter.authRouter);
 app.use('/api/user', indexRouter.userRouter);
