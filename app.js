@@ -6,7 +6,7 @@ const app = express();
 var cors = require('cors');
 const path = require('path');
 
-const port = process.env.PORT;
+const port = process.env.PORT || 8080;
 const indexRouter = require('./modules/index.router');
 
 app.use(cors());
